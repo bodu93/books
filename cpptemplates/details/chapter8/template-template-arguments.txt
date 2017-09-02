@@ -1,0 +1,14 @@
+template <
+	template <typename X>
+	class C
+	>
+void f(C<int> *p);
+
+
+template <typename T,
+		 template <typename E,
+		 	typename = std::allocator<E>
+				  >
+		class Container
+		>
+class XX;

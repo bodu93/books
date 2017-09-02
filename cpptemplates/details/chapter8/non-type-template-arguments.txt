@@ -1,0 +1,16 @@
+非类型模板参数
+
+非类型参数表示的是: 在编译期或链接期可以确定的常值, 这种参数的类型(换句话说, 就是这些常值得类型)必须是下面的一种:
+. 整型或枚举(enum而非enum class)类型
+. 指针类型(包含普通对象的指针类型,函数指针类型, 指向成员的指针类型)
+. 引用类型(指向对象或者指向函数的引用都是允许的)
+
+
+// allocator是非类型模板参数
+template <typename T, typename T::Allocator *allocator>
+class List;
+
+
+// buf是非类型模板参数
+template<int buf[5]> class Lexer;
+template<int *buf> class Lexer;

@@ -32,9 +32,11 @@
 *.swp
 .DS_store
 
+# Debug folder on macOS
+*.dSYM
+
 # TODO files
 TODO
 
 # others
 unpv1/
-aim_to_offer/

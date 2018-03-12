@@ -21,7 +21,7 @@ asm(code-strings[:output-list[:input-list[:overwrite-list]]]);
 | :--------------------- | :--------------------------------------- |
 | "=r"                   | Update value stored in a register        |
 | "+r"                   | Read and update value stored in a register |
-| "=m"                   | Update value stored in memor             |
+| "=m"                   | Update value stored in memory            |
 | "+m"                   | Read and update value stored in memory   |
 | "=rm"                  | Update value stored in a register or in memory |
 | "+rm"                  | Read and update value stored in a register or memory |

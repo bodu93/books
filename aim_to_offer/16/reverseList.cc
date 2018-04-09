@@ -3,22 +3,21 @@
 #include <iostream>
 
 ListNode* reverseList(ListNode* listHead) {
-	if (listHead == nullptr || listHead->next == nullptr) return listHead;
+	if (!listHead || !(listHead->next)) return listHead;
 
-	ListNode* frontp = listHead;
-	ListNode* backp = listHead->next;
-	ListNode* nextp = nullptr;
+	ListNode* curp = listHead;
+	ListNode* nextp = curp->next;
+	curp->next = nullptr;
 
-	while (backp != nullptr) {
-		nextp = backp->next;
-		if (frontp == listHead) frontp->next = nullptr;
-		backp->next = frontp;
+	while (nextp) {
+		ListNode* tmp = nextp->next;
+		nextp->next = curp;
 
-		frontp = backp;
-		backp = nextp;
+		curp = nextp;
+		nextp = tmp;
 	}
 
-	return frontp;
+	return curp;
 }
 
 int main() {

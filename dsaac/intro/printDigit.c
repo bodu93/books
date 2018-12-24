@@ -16,10 +16,7 @@ void printDigit(int n) {
   if (n < 0) {
     printf("-");
     printUnsignedDigit(-n);
-  } else if (n == 0) {
-    printf("0");
-  }
-  else {
+  } else {
     printUnsignedDigit(n);
   }
   printf("\n");
@@ -29,8 +26,6 @@ int main() {
   printDigit(INT_MIN);
   printDigit(INT_MAX);
   printDigit(0);
-  printDigit(10);
-  printDigit(-100);
 
   return 0;
 }

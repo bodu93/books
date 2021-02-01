@@ -1,0 +1,10 @@
+.section .data
+	<initialized data>
+
+.section .bss
+	<uninitialized data>
+
+.section .text
+.globl main
+main:
+	<instructions here...>
